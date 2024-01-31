@@ -1,10 +1,15 @@
 package com.simplequiz.model;
 
+import java.util.ArrayList;
+
 public class Question {
 
+    private Long id;
     private String theme;
     private String question;
     private String response;
+    private Long questionAlternativeID;
+    private ArrayList<QuestionAlternative> questionAlternativeArrayList;
 
     public Question(){
 
@@ -15,6 +20,16 @@ public class Question {
         this.question = question;
         this.response = response;
     }
+
+    public Question(Long id, String theme, String question, String response, Long questionAlternativeID, ArrayList<QuestionAlternative> questionAlternativeArrayList) {
+        this.id = id;
+        this.theme = theme;
+        this.question = question;
+        this.response = response;
+        this.questionAlternativeArrayList = questionAlternativeArrayList;
+        this.questionAlternativeID = questionAlternativeID;
+    }
+
 
     public String getTheme() {
         return theme;
@@ -42,10 +57,10 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Question{" +
-                "theme='" + theme + '\'' +
-                ", question='" + question + '\'' +
-                ", response='" + response + '\'' +
-                '}';
+        return  "\n\n" +
+                "id = " + id +
+                "\nTheme = " + theme +
+                "\nQuestion = " + question +
+                "\nResponse = " + response;
     }
 }

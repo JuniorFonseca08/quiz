@@ -2,6 +2,7 @@ package com.simplequiz.model;
 
 public class Player {
 
+    private Long id;
     private String nickName;
     private Integer score;
     private User user;
