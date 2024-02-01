@@ -17,6 +17,25 @@ public class Player {
         this.user = user;
     }
 
+    public Player(Long id, String nickName, Integer score, User user) {
+        this.id = id;
+        this.nickName = nickName;
+        this.score = score;
+        this.user = user;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
     public String getNickName() {
         return nickName;
     }
@@ -44,7 +63,8 @@ public class Player {
     @Override
     public String toString() {
         return "Player{" +
-                "nickName='" + nickName + '\'' +
+                "id=" + id +
+                ", nickName='" + nickName + '\'' +
                 ", score=" + score +
                 ", user=" + user +
                 '}';

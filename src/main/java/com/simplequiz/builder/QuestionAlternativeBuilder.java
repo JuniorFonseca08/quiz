@@ -12,21 +12,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PlayerBuilder {
+public class QuestionAlternativeBuilder {
 
     private final ModelMapper modelMapper;
 
-    public PlayerBuilder(ModelMapper modelMapper) {
+    public QuestionAlternativeBuilder(ModelMapper modelMapper) {
         this.modelMapper = modelMapper;
-    }
-
-    public PlayerDTO toDTO (Player player){
-        return this.modelMapper.map(player, PlayerDTO.class);
-    }
-
-    // Fiz mas nao sei se esta correto.
-    public Player toEntity (PlayerDTO playerDTO) {
-        return this.modelMapper.map(playerDTO, Player.class);
     }
 
     public QuestionAlternativeDTO toDTO (QuestionAlternative questionAlternative){
@@ -36,19 +27,5 @@ public class PlayerBuilder {
         return this.modelMapper.map(questionAlternativeDTO, QuestionAlternative.class);
     }
 
-    public QuestionDTO toDTO (Question question){
-        return this.modelMapper.map(question, QuestionDTO.class);
-    }
-
-    public Question toEntity (QuestionDTO questionDTO){
-        return this.modelMapper.map(questionDTO, Question.class);
-    }
-    public UserDTO toDTO (User user){
-        return this.modelMapper.map(user, UserDTO.class);
-    }
-
-    public User toEntity (UserDTO userDTO){
-        return this.modelMapper.map(userDTO, User.class);
-    }
 
 }

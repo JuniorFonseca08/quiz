@@ -1,31 +1,21 @@
-package com.simplequiz.model;
+package com.simplequiz.dto;
 
-public class User {
+public class UserDTO {
 
-    private Long id;
     private String name;
     private String fullName;
     private Integer age;
     private  String email;
     private String password;
 
-    public User(){
+    public UserDTO(){
 
     }
 
-    public User(String name, String fullName, Integer age) {
+    public UserDTO(String name, String fullName, Integer age) {
         this.name = name;
         this.fullName = fullName;
         this.age = age;
-    }
-
-    public User(Long id, String name, String fullName, Integer age, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.fullName = fullName;
-        this.age = age;
-        this.email = email;
-        this.password = password;
     }
 
     public String getName() {
@@ -68,19 +58,10 @@ public class User {
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
